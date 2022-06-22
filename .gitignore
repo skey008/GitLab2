@@ -18,6 +18,9 @@
 *.zip
 *.tar.gz
 *.rar
+*.project (used by Eclipse and sometimes by VSCode)
+*.classpath (used by both Eclipse and VSCode)
+*.vscode/ (used by VSCode)
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
