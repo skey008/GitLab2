@@ -131,8 +131,6 @@ public class Interval {
     return "(" + low + ',' + high + ')';
   }
 }
-<<<<<<< HEAD
-// This is from master
-=======
+
 // This is from testBranch
->>>>>>> refs/heads/testBranch
+
