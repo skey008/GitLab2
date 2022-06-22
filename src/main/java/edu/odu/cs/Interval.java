@@ -1,4 +1,4 @@
-//this lab was edited by Sami
+//this lab was edited by Samantha Key
 package edu.odu.cs;
 
 import java.util.NoSuchElementException;
