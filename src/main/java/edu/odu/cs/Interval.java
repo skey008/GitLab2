@@ -11,7 +11,7 @@ public class Interval {
   private double high;
 
   /**
-   * Create an interval from min to max. If (min > max), the interval is empty.
+   * Create an interval from min to max. If min is greater than max, the interval is empty.
    * 
    * @param min the lowest number in the new interval
    * @param max the highest number in the new interval
@@ -24,7 +24,7 @@ public class Interval {
   /**
    * Is the interval empty? (I.e., true iff it contains no numbers.)
    * 
-   * @return true iff the interval is empty
+   * @return true if the interval is empty
    */
   public boolean empty() {
     return high < low;
@@ -34,7 +34,7 @@ public class Interval {
    * Tests to see if a number is in the interval (including at either end).
    * 
    * @param d the number to look for
-   * @return true iff the number is in the interval
+   * @return true if the number is in the interval
    */
   public boolean contains(double d) {
     return d >= low && d <= high;
@@ -56,7 +56,7 @@ public class Interval {
   /**
    * The distance from the start of the interval to its end.
    * 
-   * @return
+   * @return the distance from the start of the interval to its end 
    */
   public double width() {
     return Math.max(0.0, high - low);

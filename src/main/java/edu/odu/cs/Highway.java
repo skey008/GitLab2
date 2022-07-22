@@ -11,9 +11,9 @@ public class Highway {
 
   /**
    * 
-   * @param args
-   * @return
-   * @throws IOException
+   * @param args (input file)
+   * 
+   * @throws IOException if incorrect file
    */
   public static void main(String[] args) throws IOException {
     if (args.length == 0) {
