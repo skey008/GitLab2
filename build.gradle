@@ -1,14 +1,22 @@
 plugins {
    id 'java'
+   id "application"
+
+    id "jacoco"
+    id "org.barfuin.gradle.jacocolog" version "2.0.0"
+
+
+
+    id "project-report"
 }
 
 java {
-    sourceCompatibility = JavaVersion.toVersion(1.8)
-    targetCompatibility = JavaVersion.toVersion(1.8)
+    sourceCompatibility = JavaVersion.toVersion(11)
+    targetCompatibility = JavaVersion.toVersion(11)
 }
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -18,7 +26,28 @@ dependencies {
     testImplementation 'org.hamcrest:hamcrest-library:2.2'
 }
 
+
 test {
-    ignoreFailures = true
     useJUnitPlatform()
+
+    ignoreFailures = true
+    
 }
+javadoc {
+    failOnError false
+}
+
+task reports( dependsOn: ['javadoc', 'test']){
+    
+}
+
+task deployReports (type: Copy) {
+    dependsOn 'reports' 
+    from 'build/docs'
+    into 'build/report/docs'
+}
+
+
+
+
+
