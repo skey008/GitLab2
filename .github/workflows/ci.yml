@@ -20,5 +20,4 @@ jobs:
       run: chmod +x gradlew              
     - name: Build and test
       working-directory: ./Highway
-      with: src/main/test/testData/test000.dat
       run: ./gradlew build
